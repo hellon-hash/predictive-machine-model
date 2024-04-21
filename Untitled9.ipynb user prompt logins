@@ -1,0 +1,68 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPLY19kQ1CN2GVcLnBhs2mF",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/hellon-hash/predictive-machine-model/blob/main/Untitled9.ipynb%20user%20prompt%20logins\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "id": "sjtmdFqE3i9I"
+      },
+      "outputs": [],
+      "source": [
+        "# Function to prompt user for input with validation\n",
+        "def get_input(prompt):\n",
+        "  value = input (prompt)\n",
+        "  if value.strip(): # check if input is not empty after stripping whitespace\n",
+        "    return value\n",
+        "  else:\n",
+        "    print(\"please provide a value.\")\n",
+        "\n",
+        "    # Prompt the user for their information with validation\n",
+        "    name = get_input(\"Enter your name: \")\n",
+        "    id_number = get_input(\"Enter your identification number: \")\n",
+        "    age = get_input(\"Enter your age: \")\n",
+        "    language = get_input(\"Enter your language: \")\n",
+        "    nationality = get_input(\"Enter your nationality: \")\n",
+        "\n",
+        "    # Check if any field is missing\n",
+        "    if not (name and id_number and age and language and nationality):\n",
+        "      print(\"Access Denied, Please fill out all the required information.\")\n",
+        "    else:\n",
+        "\n",
+        "        # Print the collected information\n",
+        "        print(\"\\nUser Information:\")\n",
+        "        print(\"Name:\", name)\n",
+        "        print(\"Identification Number:\", id_number)\n",
+        "        print(\"Age:\", age)\n",
+        "        print(\"Language:\", language)\n",
+        "        print(\"Nationality:\", nationality)\n",
+        "\n"
+      ]
+    }
+  ]
+}
